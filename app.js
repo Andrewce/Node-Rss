@@ -34,7 +34,7 @@ const readRss = (async () => {
             .catch(err => console.log(err))
 
 
-        res.render('rss-feed', { feed, rssImage: "image", rssLink, rssTitle: rssLink });
+        res.render('rss-feed', { feed, rssImage: "image", rssLink, rssTitle: feed.title });
     })
 
     app.get('/about', (req, res) => {
@@ -55,9 +55,9 @@ const readRss = (async () => {
         res.redirect(`/rss`)
 
         app.get('/rss', (req, res) => {
-            res.render('rss-feed', { feed: feed, rssTitle: searchRss })
+            res.render('rss-feed', { feed: feed, rssTitle: feed.title, rssLink })
 
-            console.log(feed.author)
+            console.log(feed.title)
 
         })
 
