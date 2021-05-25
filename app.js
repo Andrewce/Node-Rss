@@ -3,6 +3,8 @@ const app = express()
 let Parser = require('rss-parser');
 const path = require('path');
 const expressLayouts = require('express-ejs-layouts')
+const { v4: uuid } = require('uuid'); //For generating ID's
+
 
 const port = 3000
 
@@ -18,61 +20,50 @@ app.set('layout', './layouts/full-width')
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }))
 
-
 let parser = new Parser();
-
-
 
 const readRss = (async () => {
 
+    let openTabs = [];
 
+    const addTab = (title, url, id) => {
+        let newTab = {
+            title: title,
+            url: url,
+            id: id
+
+        }
+        openTabs.push(newTab)
+    }
 
 
     app.get('/', async (req, res) => {
-        let rssLink = 'https://www.techmeme.com/feed.xml?x=1'
-        feed = await parser.parseURL(rssLink)
-            .catch(err => console.log(err))
-
-
-        res.render('rss-feed', { feed, rssImage: "image", rssLink, rssTitle: feed.title });
+        res.render('about');
     })
 
     app.get('/about', (req, res) => {
         res.render('about', { layout: './layouts/sidebar' })
     })
 
-
-
     app.post('/', async (req, res) => {
         const { searchRss } = req.body
-
         let rssLink = searchRss
-        // console.log(rssLink)
-
         feed = await parser.parseURL(rssLink)
             .catch(err => console.log(err))
-
+        addTab(feed.title, rssLink, feed.title)
+        console.log(openTabs)
         res.redirect(`/rss`)
 
         app.get('/rss', (req, res) => {
-            res.render('rss-feed', { feed: feed, rssTitle: feed.title, rssLink })
-
-            console.log(feed.title)
-
+            res.render('rss-feed', { feed: feed, rssTitle: feed.title, rssLink, openTabs: openTabs })
         })
-
     })
-
-
 
 
 
 })
 readRss();
-const pi = 3.14
-
-
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`)
+    console.log(`App listening at http://localhost:${port}`)
 })

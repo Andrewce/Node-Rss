@@ -14,15 +14,17 @@
 <body>
 
     <%- include('../partials/header.ejs') %>
-        <div class="wrapper">
+        <%- include('../partials/navbar.ejs') %>
 
-            <main>
-                <%- body %>
-            </main>
+            <div class="wrapper">
 
-        </div>
+                <main>
+                    <%- body %>
+                </main>
 
-        <%- include('../partials/footer.ejs') %>
+            </div>
+
+            <%- include('../partials/footer.ejs') %>
 
 
 

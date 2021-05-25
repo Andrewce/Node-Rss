@@ -8,7 +8,6 @@ body {
     color: white;
     font-size: 26px;
     text-align: center;
-    padding: 10px;
     border: black;
     border-style: none none solid none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -30,7 +29,6 @@ body {
     width: 900px;
     margin: 0 auto;
     background-color: rgb(255, 255, 255);
-padding: 10px;
 }
 
 .layout-sidebar {
@@ -49,3 +47,12 @@ a { color: inherit;
     text-align: center;
     background-color: thistle;
 }
+.navbar {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 16px;
+    text-align: left;
+    padding: 5px;
+    border: rgb(37, 26, 26);
+    border-style: none none solid none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
