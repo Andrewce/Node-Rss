@@ -39,7 +39,11 @@ body {
 
 a { color: inherit; 
     text-decoration: none;
-    padding: 100px;
+    padding: 0px;
+    margin-left: 1em;
+    margin-right: 1em;
+
+
 }  
 
 .rssSubject {
@@ -56,3 +60,30 @@ a { color: inherit;
     border: rgb(37, 26, 26);
     border-style: none none solid none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.side-links {
+    background-color: rgb(187, 190, 199);
+}
+
+.nav-tabs {
+    display: flex;
+    flex-direction: row;
+    
+}
+.nav-link {
+    border-style:  solid;
+    border-color: white;
+    border-width: 0.1em;
+    margin-left: 5px ;
+
+
+}
+
+.nav-options {
+    border-style:  solid;
+    border-color: white;
+    border-width: 0.1em 0 0 0.1em;
+    margin-left: 5px ;
+
+}

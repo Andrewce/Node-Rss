@@ -11,10 +11,11 @@
     <button>Search</button>
 </form>
 <% openTabs.forEach(tab=> { %>
-    <span>
-        /<%= tab.title %>
-    </span>
-    <a href="/rss-items/<%= tab.id %>">Link</a>
+    <ul>
+        <li>
+            <%= tab.title %> + <a href="/rss-items/<%= tab.id %>">Link</a>
+        </li>
+    </ul>
     <% }) %>
 
         <ol>

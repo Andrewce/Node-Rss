@@ -38,11 +38,12 @@ const readRss = (async () => {
 
 
     app.get('/', async (req, res) => {
-        res.render('about');
+        res.render('index');
     })
 
-    app.get('/about', (req, res) => {
-        res.render('about', { layout: './layouts/sidebar' })
+
+    app.get('/feed', (req, res) => {
+        res.render('feed', { openTabs: openTabs, layout: './layouts/sidebar' })
     })
 
     app.post('/', async (req, res) => {
@@ -52,12 +53,35 @@ const readRss = (async () => {
             .catch(err => console.log(err))
         addTab(feed.title, rssLink, feed.title)
         console.log(openTabs)
-        res.redirect(`/rss`)
+        res.redirect(`/feed`)
 
-        app.get('/rss', (req, res) => {
-            res.render('rss-feed', { feed: feed, rssTitle: feed.title, rssLink, openTabs: openTabs })
-        })
+
     })
+
+    app.get('/about', (req, res) => {
+        res.render('about', { layout: './layouts/full-width' })
+    })
+
+    app.get('/rss-items/:id', async (req, res) => {
+        const searchedId = req.params.id
+        console.log("the searched ID", searchedId)
+        const rssItem = (searchedId) => {
+            for (let tab in openTabs) {
+                if (tab.id == searchedId) {
+                    rssItem = tab
+                }
+                else {
+                    alert("no ID")
+                }
+            }
+        }
+
+        res.render('rss-item', { rssItem: rssItem, openTabs: "asdasd", layout: './layouts/full-width' })
+    })
+
+})
+
+
 
 
 

@@ -1,4 +1,14 @@
 <div class="navbar">
-    <span>Now reading: //</span>
+    <div class="nav-tabs">
+
+        <div>Now reading: </div>
+        <% openTabs.forEach(tab=> { %>
+            <div class="nav-link">
+                <a href="/rss-items/<%= tab.id %>">
+                    <%= tab.title %>
+                </a>
+            </div>
+            <% }) %>
+    </div>
 
 </div>

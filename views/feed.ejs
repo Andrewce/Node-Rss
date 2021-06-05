@@ -1,0 +1,23 @@
+<h1>About page</h1>
+
+<form action="/" method="POST">
+    <label for="searchRss" for="searchRss">+</label>
+
+    <input type="text" name="searchRss" placeholder="serch the web" id="searchRss">
+    <button>Search</button>
+</form>
+<ol>
+    <% for (let item of feed.items) { %>
+        <li>
+            <h1>
+                <%= item.title %>
+            </h1>
+        </li>
+        <br>
+        <p1>
+        </p1>
+        <p1>
+            <%= item.guid %>
+        </p1>
+        <% } %>
+</ol>
