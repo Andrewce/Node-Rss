@@ -1,0 +1,149 @@
+body {
+    background-color: rgb(70, 179, 28);
+}
+
+
+.Header {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    border: black;
+    border-style: none none solid none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+
+}
+
+.Footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+
+    font-size: 26px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.wrapper {
+    width: 1200px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 10%;
+}
+
+.layout-sidebar {
+    display: flex;
+    gap: 10px;
+    grid-template-columns: 8fr 2fr 1fr;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    padding: 0px;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-decoration: none;
+}
+
+.rssSubject {
+    color: red;
+    text-align: center;
+    background-color: thistle;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+.side-links {
+    background-color: rgb(187, 190, 199);
+}
+
+.nav-link {
+    border-style: solid;
+    border-color: white;
+    border-width: 0.1em;
+    margin-left: 5px;
+
+
+}
+
+.nav-options {
+    border-style: solid;
+    border-color: white;
+    border-width: 0.1em 0 0 0.1em;
+    margin-left: 5px;
+
+}
+
+.content {
+    margin-top: -15px;
+    background-color: #47bbe9ea;
+    border-radius: 30px;
+    min-height: 500px;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12)
+    
+}
+
+.content-item {
+    background-color: #81bacc62;
+    text-align: center;
+
+}
+
+.preview-img {
+    min-width: 200px;
+    border-radius: 5%;
+}
+
+.f-grow {
+    flex-grow: 1;
+}
+
+.t-center {
+    text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+
+}
+
+.navContent {
+    margin-top: -15px;
+    background-color: #0f83c7ea;
+    border-radius: 30px;
+    width: auto;
+    min-width: 100%;
+    margin-bottom: 1;
+    color: white;
+}
+
+.textWhite {
+    color: white;
+}
+
+#feedImg img {
+    max-width:300px;
+    height:auto;
+}
+
+
+

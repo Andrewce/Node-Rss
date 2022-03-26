@@ -1,0 +1,27 @@
+<div class="container content mb-5 ">
+    <div class="mb-3 p-4">
+        <h2 class="mx-auto ">
+            <%= feed.title %>
+        </h2>
+    </div>
+    <ol>
+        <% for (let item of feed.items) { %>
+            <div class="card mb-1">
+                <div class="content-item">
+                    <div class="card-title">
+                        <h4 class="mb-1">
+                            <%= item.title %>
+                        </h4>
+                    </div>
+                    <div id="feedImg" class="feedImg">
+                        <%- item.content %>
+                    </div>
+
+                    <p class="card-body">
+                        <%= item.guid %>
+                    </p>
+                </div>
+            </div>
+            <% } %>
+    </ol>
+</div>

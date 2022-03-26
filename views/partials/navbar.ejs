@@ -1,0 +1,19 @@
+<div class="">
+    <div class="d-flex justify-content-center">
+        <div>Now reading: </div>
+        <div class="d-flex justify-content-center navbar">
+            <% if (openTabs !=="undefined" ) { %>
+                <% openTabs.forEach(tab=> { %>
+                    <div class="nav-link navContent p-2 mb-1 mt-1 textWhite">
+                        <a class="textWhite" href="/feed/<%= tab.url%>">
+                            *<%= tab.title %>*
+                        </a>
+                    </div>
+                    <% }) %>
+
+                        <% } else { %>
+                            <h1>EMPTHY</h1>
+                            <% }%>
+        </div>
+    </div>
+</div>
